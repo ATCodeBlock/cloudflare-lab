@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avinash Cloud Lab</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">☁ Avinash Cloud Lab</a>
+      <nav>
+        <a href="#cloudflare">Cloudflare</a>
+        <a href="#rest-api">REST APIs</a>
+        <a href="#websockets">WebSockets</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Avinash Cloud Lab</h1>
+      <p>Hands-on demos and learning resources for Cloudflare, Java REST APIs, and WebSockets.</p>
+      <a href="#cloudflare" class="btn">Explore Labs</a>
+    </div>
+  </section>
+
+  <!-- CLOUDFLARE SECTION -->
+  <section id="cloudflare" class="section">
+    <div class="container">
+      <h2 class="section-title">Cloudflare</h2>
+      <p class="section-subtitle">Edge computing, Workers, Pages, and CDN fundamentals.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3>Cloudflare Pages</h3>
+          <p>Deploy static sites and JAMstack apps directly from Git with global edge delivery.</p>
+          <span class="tag">Static Hosting</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Cloudflare Workers</h3>
+          <p>Run serverless JavaScript at the edge, close to your users, with zero cold starts.</p>
+          <span class="tag">Serverless</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Security &amp; CDN</h3>
+          <p>DDoS protection, WAF, SSL/TLS and global content delivery built in.</p>
+          <span class="tag">Security</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REST API SECTION -->
+  <section id="rest-api" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Java REST APIs</h2>
+      <p class="section-subtitle">Building and consuming RESTful services with Java and Spring Boot.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">☕</div>
+          <h3>Spring Boot Basics</h3>
+          <p>Stand up a REST API with Spring Boot, controllers, and JSON serialization in minutes.</p>
+          <span class="tag">Spring Boot</span>
+        </div>
+        <div class="card demo-card">
+          <div class="card-icon">🚀</div>
+          <h3>REST API Demo</h3>
+          <p>Interactive demo showcasing CRUD endpoints, request/response flow, and HTTP methods.</p>
+          <span class="tag tag-coming">Coming Soon</span>
+          <button class="btn btn-outline" onclick="showComingSoon('REST API Demo')">Preview</button>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>API Best Practices</h3>
+          <p>Versioning, error handling, pagination, and authentication patterns for production APIs.</p>
+          <span class="tag">Best Practices</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEBSOCKET SECTION -->
+  <section id="websockets" class="section">
+    <div class="container">
+      <h2 class="section-title">WebSockets</h2>
+      <p class="section-subtitle">Real-time, bidirectional communication for the modern web.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🔌</div>
+          <h3>WebSocket Protocol</h3>
+          <p>Full-duplex communication over a single TCP connection — how it works under the hood.</p>
+          <span class="tag">Protocol</span>
+        </div>
+        <div class="card demo-card">
+          <div class="card-icon">🎮</div>
+          <h3>Multiplayer WebSocket Demo</h3>
+          <p>Live multiplayer demo using WebSockets — see real-time state sync between clients.</p>
+          <span class="tag tag-coming">Coming Soon</span>
+          <button class="btn btn-outline" onclick="showComingSoon('Multiplayer WebSocket Demo')">Preview</button>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛠</div>
+          <h3>Cloudflare Durable Objects</h3>
+          <p>Scale WebSocket connections at the edge using Cloudflare's stateful serverless primitives.</p>
+          <span class="tag">Edge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Avinash Cloud Lab &mdash; v1.0 &mdash; Deployed on Cloudflare Pages</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
