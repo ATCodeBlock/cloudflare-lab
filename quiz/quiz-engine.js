@@ -64,12 +64,28 @@
       </div>
       <div class="feedback" id="feedback" hidden></div>
       <div class="quiz-controls">
+        <button class="btn exit-btn" id="exit-btn" type="button"
+                aria-haspopup="dialog">🚪 Exit Quiz</button>
         <button class="btn hint-btn" id="hint-btn">💡 Show Hint</button>
         <div class="spacer"></div>
         <button class="btn skip-btn" id="skip-btn">Skip Question</button>
         <button class="btn next-btn" id="next-btn" disabled>Next Question &rarr;</button>
       </div>
     </section>
+
+    <!-- Exit confirmation modal -->
+    <div class="modal-overlay" id="exit-modal" hidden>
+      <div class="modal" role="dialog" aria-modal="true"
+           aria-labelledby="exit-modal-title">
+        <div class="modal-icon">🚪</div>
+        <h3 class="modal-title" id="exit-modal-title">Are you sure you want to exit the quiz?</h3>
+        <p class="modal-sub">If you leave now, your progress in this quiz will be lost.</p>
+        <div class="modal-actions">
+          <button class="btn modal-exit-btn" id="exit-confirm" type="button">Exit Quiz</button>
+          <button class="btn modal-continue-btn" id="exit-cancel" type="button">Continue Quiz</button>
+        </div>
+      </div>
+    </div>
   `;
 
   const $ = (id) => document.getElementById(id);
@@ -80,6 +96,8 @@
   const speakBtn = $('speak-btn');
   const feedbackEl = $('feedback');
   const skipBtn = $('skip-btn'), nextBtn = $('next-btn');
+  const exitBtn = $('exit-btn'), exitModal = $('exit-modal');
+  const exitConfirm = $('exit-confirm'), exitCancel = $('exit-cancel');
 
   // Hide the speaker button entirely when speech is not supported
   if (!speechOK) {
@@ -272,6 +290,36 @@
       renderQuestion();
     } else {
       renderResults();
+    }
+  });
+
+  // ── Exit Quiz (with confirmation to prevent accidental exits) ──
+  exitBtn.addEventListener('click', () => {
+    // Stop any audio while the dialog is up
+    if (speechOK) window.speechSynthesis.cancel();
+    exitModal.hidden = false;
+    exitConfirm.focus();
+  });
+
+  exitCancel.addEventListener('click', () => {
+    exitModal.hidden = true;
+    exitBtn.focus();
+  });
+
+  exitConfirm.addEventListener('click', () => {
+    // __navigate is a test seam; in the real browser location.href does the job
+    if (typeof window.__navigate === 'function') {
+      window.__navigate('index.html');
+    } else {
+      window.location.href = 'index.html';
+    }
+  });
+
+  // Escape key closes the dialog (same as Continue Quiz)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !exitModal.hidden) {
+      exitModal.hidden = true;
+      exitBtn.focus();
     }
   });
 

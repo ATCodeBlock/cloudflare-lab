@@ -41,7 +41,7 @@ function assert(cond, msg) {
 }
 
 /** Load a quiz page and wait for the engine to initialise. */
-async function loadPage(bookNum, { mockSpeech = true } = {}) {
+async function loadPage(bookNum, { mockSpeech = true, mockNavigate = false } = {}) {
   const html = fs.readFileSync(path.join(ROOT, `book${bookNum}.html`), 'utf8');
   const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', `book${bookNum}.json`), 'utf8'));
 
@@ -64,6 +64,12 @@ async function loadPage(bookNum, { mockSpeech = true } = {}) {
           return Promise.resolve({ ok: false, status: 404, json: () => Promise.reject(e) });
         }
       };
+
+      if (mockNavigate) {
+        // Seam the engine's __navigate hook so exit can be verified without
+        // actually leaving the page (jsdom cannot navigate)
+        window.__navigate = (url) => { window.__navTarget = url; };
+      }
 
       if (mockSpeech) {
         // Minimal Web Speech API shim so engine speech path is exercised
@@ -274,7 +280,51 @@ async function testSpeakButton() {
     'Speak button hidden when speechSynthesis unavailable');
 }
 
-// ── Full quiz flow with all three enhancements working together ──
+// ── Exit Quiz modal ──
+async function testExitModal() {
+  console.log('\n── Exit Quiz modal ──');
+  const { document, window } = await loadPage(4, { mockSpeech: true, mockNavigate: true });
+
+  const exitBtn    = $$(document, '#exit-btn');
+  const exitModal  = $$(document, '#exit-modal');
+  const exitConfirm = $$(document, '#exit-confirm');
+  const exitCancel  = $$(document, '#exit-cancel');
+
+  assert(!!exitBtn,    'Exit Quiz button present');
+  assert(!!exitModal,  'Exit modal element present');
+  assert(exitModal.hidden === true, 'Modal hidden on quiz start');
+
+  // Open modal
+  exitBtn.click();
+  assert(exitModal.hidden === false, 'Modal visible after clicking Exit Quiz');
+
+  // "Continue Quiz" closes modal without navigating
+  exitCancel.click();
+  assert(exitModal.hidden === true,  'Modal hidden after clicking Continue Quiz');
+  assert(window.__navTarget === undefined, 'No navigation after Continue Quiz');
+
+  // Open again, then confirm exit
+  exitBtn.click();
+  assert(exitModal.hidden === false, 'Modal re-opens on second click');
+  exitConfirm.click();
+  assert(window.__navTarget === 'index.html', 'Confirmed exit navigates to index.html');
+
+  // ── Escape key dismisses the modal ──
+  // Reset
+  window.__navTarget = undefined;
+  exitBtn.click();
+  assert(exitModal.hidden === false, 'Modal visible for Escape key test');
+  const escEvent = new document.defaultView.KeyboardEvent('keydown', { key: 'Escape', bubbles: true });
+  document.dispatchEvent(escEvent);
+  assert(exitModal.hidden === true, 'Escape key dismisses the modal');
+  assert(window.__navTarget === undefined, 'Escape key does not navigate');
+
+  // ── Modal stays hidden during normal quiz interaction ──
+  window.__navTarget = undefined;
+  const data = JSON.parse(require('fs').readFileSync(require('path').join(ROOT, 'data', 'book4.json'), 'utf8'));
+  getOptions(document)[data.questions[0].answer].click(); // answer Q1
+  assert(exitModal.hidden === true, 'Modal stays closed after answering a question');
+}
 async function runFullScenario(label, bookNum, plan) {
   console.log(`\n── ${label} (book ${bookNum}) ──`);
   const { document, data } = await loadPage(bookNum);
@@ -289,6 +339,10 @@ async function runFullScenario(label, bookNum, plan) {
     // Counter
     assert($$(document, '#counter').textContent === `Question ${i + 1} of ${total}`,
       `Q${i+1}: counter = "Question ${i+1} of ${total}"`);
+
+    // Exit button always present during quiz
+    assert($$(document, '#exit-btn') !== null, `Q${i+1}: exit button present`);
+    assert($$(document, '#exit-modal').hidden === true, `Q${i+1}: exit modal closed`);
 
     // Progress bar
     const pct = (i / total) * 100;
@@ -394,6 +448,7 @@ async function runFullScenario(label, bookNum, plan) {
   await testHintToggle();
   await testManualHintButton();
   await testSpeakButton();
+  await testExitModal();
 
   // Full quiz flow scenarios
   await runFullScenario('All correct (100% PASS)', 1, Array(20).fill('correct'));
