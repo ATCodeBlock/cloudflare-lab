@@ -203,7 +203,6 @@
   }
 
   function lockControls() {
-    hintBtn.disabled = true;
     skipBtn.disabled = true;
     nextBtn.disabled = false;
     updateScore();
@@ -216,24 +215,18 @@
   });
 
   function syncHintVisibility() {
-    if (hintsEnabled) {
-      hintBox.hidden = false;
-      hintBtn.disabled = true;
-      hintBtn.textContent = '💡 Hint Shown';
-    } else {
-      hintBox.hidden = true;
-      if (!answered) {
-        hintBtn.disabled = false;
-        hintBtn.textContent = '💡 Show Hint';
-      }
-    }
+    // Toggle on → hint for the current question is shown automatically;
+    // toggle off → hidden. Button label always reflects the current state.
+    hintBox.hidden = !hintsEnabled;
+    hintBtn.textContent = hintsEnabled ? '🙈 Hide Hint' : '💡 Show Hint';
+    if (!answered) hintBtn.disabled = false;
   }
 
-  // ── Per-question Show Hint button (manual reveal) ──
+  // ── Per-question Show/Hide Hint toggle button ──
   hintBtn.addEventListener('click', () => {
-    hintBox.hidden = false;
-    hintBtn.disabled = true;
-    hintBtn.textContent = '💡 Hint Shown';
+    const showing = !hintBox.hidden;
+    hintBox.hidden = showing;                       // flip visibility
+    hintBtn.textContent = showing ? '💡 Show Hint' : '🙈 Hide Hint';
   });
 
   // ── Text-to-speech (Web Speech API, no external deps) ──

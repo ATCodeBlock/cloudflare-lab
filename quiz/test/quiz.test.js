@@ -176,53 +176,70 @@ async function testHintToggle() {
   console.log('\n── Hint toggle ──');
   const { document, data } = await loadPage(2);
 
-  // Default: hints OFF, hint box hidden
+  // Default: hints OFF, hint box hidden, button says Show Hint
   assert($$(document, '#hint-toggle').checked === false, 'Hint toggle off by default');
   assert($$(document, '#hintbox').hidden === true, 'Hint box hidden by default');
-  assert($$(document, '#hint-btn').disabled === false, 'Show Hint button enabled by default');
+  assert($$(document, '#hint-btn').textContent.includes('Show Hint'),
+    'Hint button label is Show Hint by default');
 
-  // Enable toggle → hint for current Q immediately visible
+  // Enable toggle → hint for current Q immediately visible, label = Hide Hint
   $$(document, '#hint-toggle').checked = true;
   $$(document, '#hint-toggle').dispatchEvent(new document.defaultView.Event('change'));
   assert($$(document, '#hintbox').hidden === false, 'Hint box visible after enabling toggle');
   assert($$(document, '#hinttext').textContent === data.questions[0].hint,
     'Hint text matches JSON when toggle enabled');
-  assert($$(document, '#hint-btn').disabled === true,
-    'Show Hint button disabled when toggle is on');
+  assert($$(document, '#hint-btn').textContent.includes('Hide Hint'),
+    'Hint button label is Hide Hint when toggle on');
 
-  // Disable toggle → hint hidden again
+  // Disable toggle → hint hidden, label = Show Hint
   $$(document, '#hint-toggle').checked = false;
   $$(document, '#hint-toggle').dispatchEvent(new document.defaultView.Event('change'));
   assert($$(document, '#hintbox').hidden === true, 'Hint box hidden again after disabling toggle');
-  assert($$(document, '#hint-btn').disabled === false,
-    'Show Hint button re-enabled after disabling toggle');
+  assert($$(document, '#hint-btn').textContent.includes('Show Hint'),
+    'Hint button label is Show Hint after disabling toggle');
 
   // Toggle persists to next question
   $$(document, '#hint-toggle').checked = true;
   $$(document, '#hint-toggle').dispatchEvent(new document.defaultView.Event('change'));
-  getOptions(document)[data.questions[0].answer].click(); // answer Q1
+  getOptions(document)[data.questions[0].answer].click();
   $$(document, '#next-btn').click();
   await sleep(20);
-  // Q2 should auto-show hint since toggle is on
   assert($$(document, '#hintbox').hidden === false,
     'Hint auto-shown on Q2 when toggle was left on');
   assert($$(document, '#hinttext').textContent === data.questions[1].hint,
     'Q2 hint text matches JSON');
 }
 
-// ── Per-question Show Hint button (manual reveal, toggle off) ──
+// ── Per-question Show/Hide Hint toggle (toggle off) ──
 async function testManualHintButton() {
-  console.log('\n── Manual Show Hint button ──');
+  console.log('\n── Manual Show/Hide Hint toggle ──');
   const { document, data } = await loadPage(3);
 
-  // Toggle is off — hint box hidden
-  assert($$(document, '#hintbox').hidden === true, 'Hint hidden before click');
+  // Initially hidden, label says Show Hint
+  assert($$(document, '#hintbox').hidden === true, 'Hint hidden initially');
+  assert($$(document, '#hint-btn').textContent.includes('Show Hint'),
+    'Button label is "Show Hint" initially');
+  assert($$(document, '#hint-btn').disabled === false, 'Hint button enabled');
+
+  // Click 1: show
   $$(document, '#hint-btn').click();
-  assert($$(document, '#hintbox').hidden === false, 'Hint visible after click');
+  assert($$(document, '#hintbox').hidden === false, 'Hint visible after first click');
   assert($$(document, '#hinttext').textContent === data.questions[0].hint,
-    'Manual hint text matches JSON');
-  assert($$(document, '#hint-btn').disabled === true,
-    'Show Hint button disabled after click');
+    'Hint text matches JSON');
+  assert($$(document, '#hint-btn').textContent.includes('Hide Hint'),
+    'Label changes to "Hide Hint" when shown');
+
+  // Click 2: hide
+  $$(document, '#hint-btn').click();
+  assert($$(document, '#hintbox').hidden === true, 'Hint hidden after second click');
+  assert($$(document, '#hint-btn').textContent.includes('Show Hint'),
+    'Label changes back to "Show Hint" when hidden');
+
+  // Click 3: show again (toggle works repeatedly)
+  $$(document, '#hint-btn').click();
+  assert($$(document, '#hintbox').hidden === false, 'Hint visible after third click');
+  assert($$(document, '#hint-btn').textContent.includes('Hide Hint'),
+    'Label is "Hide Hint" again');
 }
 
 // ── Speak button: rendered, toggles, and fires SpeechSynthesis ──
@@ -293,6 +310,19 @@ async function testExitModal() {
   assert(!!exitBtn,    'Exit Quiz button present');
   assert(!!exitModal,  'Exit modal element present');
   assert(exitModal.hidden === true, 'Modal hidden on quiz start');
+  // jsdom does not parse external CSS, so computed display is always '' here.
+  // The real fix is .modal-overlay[hidden] { display: none } in quiz.css,
+  // which overrides the display:flex rule in every real browser.
+  // We verify the attribute-level fix (hidden=true) which is what the CSS
+  // selector targets.
+  assert(exitModal.getAttribute('hidden') !== null,
+    'Modal [hidden] attribute is set on load (CSS rule targets this)');
+
+  // Static regression check for the actual fix: the [hidden] selector must
+  // exist in quiz.css and override the flex display
+  const css = fs.readFileSync(path.join(ROOT, 'quiz.css'), 'utf8');
+  assert(/\.modal-overlay\[hidden\]\s*\{\s*display:\s*none\s*;?\s*\}/.test(css),
+    'quiz.css contains .modal-overlay[hidden] { display: none } override');
 
   // Open modal
   exitBtn.click();
@@ -364,6 +394,13 @@ async function runFullScenario(label, bookNum, plan) {
       $$(document, '#hint-btn').click();
       assert($$(document, '#hintbox').hidden === false, `Q${i+1}: hint visible after click`);
       assert($$(document, '#hinttext').textContent === Q.hint, `Q${i+1}: hint text from JSON`);
+      assert($$(document, '#hint-btn').textContent.includes('Hide Hint'),
+        `Q${i+1}: label is Hide Hint while shown`);
+      // Toggle it off and on again mid-quiz
+      $$(document, '#hint-btn').click();
+      assert($$(document, '#hintbox').hidden === true, `Q${i+1}: hint hidden after toggle off`);
+      $$(document, '#hint-btn').click();
+      assert($$(document, '#hintbox').hidden === false, `Q${i+1}: hint visible after toggle on`);
       getOptions(document)[Q.answer].click();
       correct++;
     } else if (action === 'correct') {

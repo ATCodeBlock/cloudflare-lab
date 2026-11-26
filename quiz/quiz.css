@@ -411,6 +411,11 @@ body {
 /* ════════════════════════════
    EXIT CONFIRMATION MODAL
 ════════════════════════════ */
+/* ── Exit confirmation modal ── */
+/* [hidden] must win over the display:flex below, or the modal
+   shows on page load in every browser */
+.modal-overlay[hidden] { display: none; }
+
 .modal-overlay {
   position: fixed;
   inset: 0;
