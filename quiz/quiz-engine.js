@@ -2,7 +2,12 @@
  * quiz-engine.js — Shared quiz engine for all Magic Tree House quiz pages.
  * Each quiz page has: <main id="quiz-app" data-book="1"></main>
  * The engine fetches data/book<N>.json and drives the quiz.
- * Books are added by dropping a JSON file and a book<N>.html page.
+ *
+ * Features:
+ * - One question at a time, instant feedback, skip support
+ * - Hint toggle (auto-show hints) + per-question Show Hint button
+ * - Score displayed as correct/attempted
+ * - Question read-aloud via Web Speech API (no external dependencies)
  */
 'use strict';
 
@@ -18,10 +23,19 @@
   let quiz    = null;   // { book, title, emoji, questions: [] }
   let index   = 0;      // current question index
   let score   = 0;      // correct count
-  let skipped = 0;
+  let attempted = 0;    // answered + skipped so far
   let answered = false;  // answered/skipped current question?
+  let hintsEnabled = false; // master hint toggle
+  let speaking = false;   // TTS currently playing
 
-  // ── DOM refs (built once) ──
+  const SPEECH_RATE = 0.8;      // slower for young readers
+  const SPEECH_LANG = 'en-US'; // US English
+
+  const speechOK = typeof window !== 'undefined'
+    && 'speechSynthesis' in window
+    && 'SpeechSynthesisUtterance' in window;
+
+  // ── DOM (built once) ──
   app.innerHTML = `
     <header class="quiz-header">
       <a href="index.html" class="quiz-back">&larr; All Quizzes</a>
@@ -29,12 +43,21 @@
       <p class="quiz-meta">Book <span class="quiz-booknum"></span> &middot; 20 questions</p>
     </header>
     <div class="quiz-status">
-      <div class="quiz-score">Score: <span id="score">0</span></div>
+      <div class="quiz-score">Score: <span id="score">0/0</span></div>
+      <label class="hint-toggle" title="Turn hints on or off">
+        <input type="checkbox" id="hint-toggle" />
+        <span class="hint-toggle-track"><span class="hint-toggle-knob"></span></span>
+        <span class="hint-toggle-label">💡 Hints</span>
+      </label>
       <div class="quiz-counter" id="counter">Question 1 of 20</div>
     </div>
     <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
     <section class="quiz-card" id="card" aria-live="polite">
-      <h2 class="question-text" id="qtext"></h2>
+      <div class="question-row">
+        <h2 class="question-text" id="qtext"></h2>
+        <button class="speak-btn" id="speak-btn" type="button"
+                aria-label="Listen to the question" title="Listen to the question">🔊</button>
+      </div>
       <div class="options" id="options"></div>
       <div class="hint-box" id="hintbox" hidden>
         <strong>Hint:</strong> <span id="hinttext"></span>
@@ -53,8 +76,15 @@
   const scoreEl = $('score'), counterEl = $('counter'), progressEl = $('progress');
   const qtextEl = $('qtext'), optionsEl = $('options');
   const hintBox = $('hintbox'), hintText = $('hinttext'), hintBtn = $('hint-btn');
+  const hintToggle = $('hint-toggle');
+  const speakBtn = $('speak-btn');
   const feedbackEl = $('feedback');
   const skipBtn = $('skip-btn'), nextBtn = $('next-btn');
+
+  // Hide the speaker button entirely when speech is not supported
+  if (!speechOK) {
+    speakBtn.style.display = 'none';
+  }
 
   // ── Load data ──
   fetch(dataUrl)
@@ -81,16 +111,18 @@
     progressEl.style.width = `${(index / quiz.questions.length) * 100}%`;
     qtextEl.textContent = q.q;
 
-    hintBox.hidden = true;
+    // Hint visibility follows the master toggle
     hintText.textContent = q.hint;
-    hintBtn.disabled = false;
-    hintBtn.textContent = '💡 Show Hint';
+    syncHintVisibility();
+
     feedbackEl.hidden = true;
     feedbackEl.textContent = '';
     skipBtn.disabled = false;
     nextBtn.disabled = true;
     nextBtn.textContent = (index === quiz.questions.length - 1)
       ? 'See Results 🎉' : 'Next Question →';
+
+    resetSpeakButton();
 
     optionsEl.innerHTML = '';
     q.options.forEach((opt, i) => {
@@ -108,6 +140,7 @@
   function choose(i) {
     if (answered) return;
     answered = true;
+    attempted++;
     const q = quiz.questions[index];
     const correct = i === q.answer;
 
@@ -123,12 +156,15 @@
   skipBtn.addEventListener('click', () => {
     if (answered) return;
     answered = true;
+    attempted++;
     const q = quiz.questions[index];
-    skipped++;
+    skippedCount++;
     paintOptions(q.answer, -1);
     showFeedback('👀 Skipped! The correct answer is shown in green.');
     lockControls();
   });
+
+  let skippedCount = 0;
 
   function paintOptions(correctIdx, chosenIdx) {
     [...optionsEl.children].forEach((btn, i) => {
@@ -144,21 +180,89 @@
   }
 
   function updateScore() {
-    scoreEl.textContent = score;
+    // correct / attempted — unattempted questions do not count
+    scoreEl.textContent = `${score}/${attempted}`;
   }
 
   function lockControls() {
     hintBtn.disabled = true;
     skipBtn.disabled = true;
     nextBtn.disabled = false;
+    updateScore();
   }
 
-  // ── Hint ──
+  // ── Hint master toggle ──
+  hintToggle.addEventListener('change', () => {
+    hintsEnabled = hintToggle.checked;
+    syncHintVisibility();
+  });
+
+  function syncHintVisibility() {
+    if (hintsEnabled) {
+      hintBox.hidden = false;
+      hintBtn.disabled = true;
+      hintBtn.textContent = '💡 Hint Shown';
+    } else {
+      hintBox.hidden = true;
+      if (!answered) {
+        hintBtn.disabled = false;
+        hintBtn.textContent = '💡 Show Hint';
+      }
+    }
+  }
+
+  // ── Per-question Show Hint button (manual reveal) ──
   hintBtn.addEventListener('click', () => {
     hintBox.hidden = false;
     hintBtn.disabled = true;
     hintBtn.textContent = '💡 Hint Shown';
   });
+
+  // ── Text-to-speech (Web Speech API, no external deps) ──
+  speakBtn.addEventListener('click', () => {
+    if (!speechOK) return;
+    const synth = window.speechSynthesis;
+
+    // Toggle: stop playback if already speaking
+    if (speaking) {
+      synth.cancel();
+      setSpeaking(false);
+      return;
+    }
+
+    // Stop any existing audio before starting new playback
+    synth.cancel();
+
+    const text = quiz.questions[index].q;
+    const utter = new window.SpeechSynthesisUtterance(text);
+    utter.lang = SPEECH_LANG;
+    utter.rate = SPEECH_RATE;
+
+    // Prefer a US English voice, fall back to any English voice
+    const voices = typeof synth.getVoices === 'function' ? synth.getVoices() : [];
+    const voice = voices.find(v => v && v.lang === 'en-US')
+      || voices.find(v => v && typeof v.lang === 'string' && v.lang.toLowerCase().startsWith('en'));
+    if (voice) utter.voice = voice;
+
+    utter.onend = () => setSpeaking(false);
+    utter.onerror = () => setSpeaking(false);
+
+    setSpeaking(true);
+    synth.speak(utter);
+  });
+
+  function setSpeaking(on) {
+    speaking = on;
+    speakBtn.textContent = on ? '⏹️' : '🔊';
+    speakBtn.classList.toggle('speaking', on);
+    speakBtn.title = on ? 'Stop reading' : 'Listen to the question';
+    speakBtn.setAttribute('aria-label', speakBtn.title);
+  }
+
+  function resetSpeakButton() {
+    if (speechOK && speaking) window.speechSynthesis.cancel();
+    setSpeaking(false);
+  }
 
   // ── Next / Results ──
   nextBtn.addEventListener('click', () => {
@@ -175,7 +279,7 @@
   function renderResults() {
     const total = quiz.questions.length;
     const correct = score;
-    const incorrect = total - correct - skipped;
+    const incorrect = attempted - correct - skippedCount;
     const pct = Math.round((correct / total) * 100);
     const passed = (correct / total) >= PASS_MARK;
 
@@ -186,6 +290,9 @@
       : (correct >= total * 0.6
           ? '💪 Good effort! You know a lot about this book. A little more reading and you\'ll ace it!'
           : '🌱 Every adventure takes practice! Re-read the book and try again — you\'ve got this!');
+
+    // Stop any audio still playing when the quiz ends
+    if (speechOK) window.speechSynthesis.cancel();
 
     app.innerHTML = `
       <header class="quiz-header">
@@ -200,7 +307,7 @@
           <div class="stat"><span class="stat-num">${total}</span><span class="stat-label">Questions</span></div>
           <div class="stat"><span class="stat-num">${correct}</span><span class="stat-label">Correct</span></div>
           <div class="stat"><span class="stat-num">${incorrect}</span><span class="stat-label">Incorrect</span></div>
-          <div class="stat"><span class="stat-num">${skipped}</span><span class="stat-label">Skipped</span></div>
+          <div class="stat"><span class="stat-num">${skippedCount}</span><span class="stat-label">Skipped</span></div>
         </div>
         <div class="score-ring">
           <span class="score-pct">${pct}%</span>

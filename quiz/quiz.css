@@ -127,13 +127,71 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
-.quiz-score   { color: var(--mth-green); }
-.quiz-counter { color: var(--mth-muted); }
+.quiz-score   { color: var(--mth-green); white-space: nowrap; }
+.quiz-counter { color: var(--mth-muted); white-space: nowrap; }
+
+/* ── Hint toggle switch ── */
+.hint-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7a5900;
+}
+
+.hint-toggle input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hint-toggle-track {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  background: #d6cbb8;
+  border-radius: 11px;
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+.hint-toggle input:checked + .hint-toggle-track {
+  background: var(--mth-yellow);
+}
+
+.hint-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  transition: transform 0.25s;
+}
+
+.hint-toggle input:checked + .hint-toggle-track .hint-toggle-knob {
+  transform: translateX(16px);
+}
+
+.hint-toggle:focus-within .hint-toggle-track {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hint-toggle-label { color: #7a5900; }
 
 /* ── Progress bar ── */
 .progress-track {
@@ -170,6 +228,57 @@ body {
   margin-bottom: 1.4rem;
   color: var(--mth-text);
   line-height: 1.4;
+}
+
+/* ── Question row (text + speak button) ── */
+.question-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.question-row .question-text {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ── Speak / TTS button ── */
+.speak-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--accent-lt);
+  color: var(--accent-dark);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s;
+  padding: 0;
+  margin-top: 2px; /* optical alignment with first text line */
+}
+
+.speak-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.speak-btn.speaking {
+  background: var(--accent);
+  color: #fff;
+  animation: pulse-ring 1.2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(var(--accent-rgb, 230,126,34), 0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(var(--accent-rgb, 230,126,34), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb, 230,126,34), 0); }
 }
 
 /* ── Option buttons ── */
@@ -545,6 +654,17 @@ body {
   .quiz-controls { justify-content: center; }
   .spacer        { display: none; }
   .book-grid     { grid-template-columns: 1fr; }
+
+  /* Status bar: score, toggle, counter stack neatly */
+  .quiz-status {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  /* Question row: bigger tap target, question wraps */
+  .question-row   { gap: 0.5rem; }
+  .speak-btn      { width: 46px; height: 46px; font-size: 1.25rem; }
 }
 
 /* ── Per-book accent variable (applied by each quiz page via inline style or data attr) ── */
