@@ -11,3 +11,6 @@ Thumbs.db
 
 # Cloudflare
 .wrangler/
+
+# Node (dev-only jsdom for quiz tests)
+node_modules/

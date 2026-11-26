@@ -1,0 +1,227 @@
+{
+  "book": 1,
+  "title": "Dinosaurs Before Dark",
+  "emoji": "🦕",
+  "questions": [
+    {
+      "q": "Who is Jack's sister?",
+      "options": [
+        "Morgan",
+        "Mary",
+        "Lucy",
+        "Annie"
+      ],
+      "hint": "She is his younger sibling.",
+      "answer": 3
+    },
+    {
+      "q": "What do the children discover in the woods?",
+      "options": [
+        "A tree house",
+        "A castle",
+        "A cave",
+        "A boat"
+      ],
+      "hint": "Look up among the branches.",
+      "answer": 0
+    },
+    {
+      "q": "What does Jack love to use to learn?",
+      "options": [
+        "Drums",
+        "Books",
+        "Maps only",
+        "Paint"
+      ],
+      "hint": "He likes reading facts.",
+      "answer": 1
+    },
+    {
+      "q": "Where does the tree house take them?",
+      "options": [
+        "A pirate ship",
+        "The Moon",
+        "The age of dinosaurs",
+        "Ancient Egypt"
+      ],
+      "hint": "Huge reptiles live there.",
+      "answer": 2
+    },
+    {
+      "q": "What flying creature do they meet?",
+      "options": [
+        "Butterfly",
+        "Pteranodon",
+        "Bat",
+        "Eagle"
+      ],
+      "hint": "It lived long ago and had wings.",
+      "answer": 1
+    },
+    {
+      "q": "How does Annie treat the flying creature?",
+      "options": [
+        "Fearfully all the time",
+        "Kindly",
+        "Carelessly",
+        "Angrily"
+      ],
+      "hint": "She tries to make friends.",
+      "answer": 1
+    },
+    {
+      "q": "What does Jack carry to record facts?",
+      "options": [
+        "Camera",
+        "Lunchbox",
+        "Notebook",
+        "Radio"
+      ],
+      "hint": "He can write in it.",
+      "answer": 2
+    },
+    {
+      "q": "Which dinosaur has three horns?",
+      "options": [
+        "Pteranodon",
+        "Tyrannosaurus",
+        "Anatosaurus",
+        "Triceratops"
+      ],
+      "hint": "Its name begins with tri.",
+      "answer": 3
+    },
+    {
+      "q": "Which large meat-eating dinosaur threatens Jack?",
+      "options": [
+        "Stegosaurus",
+        "Anatosaurus",
+        "Triceratops",
+        "Tyrannosaurus rex"
+      ],
+      "hint": "It is often called T. rex.",
+      "answer": 3
+    },
+    {
+      "q": "Who helps Jack escape the dangerous dinosaur?",
+      "options": [
+        "Pteranodon",
+        "A dog",
+        "A knight",
+        "A pirate"
+      ],
+      "hint": "Think of the flying creature.",
+      "answer": 0
+    },
+    {
+      "q": "What shiny object does Jack find?",
+      "options": [
+        "Gold medallion",
+        "Glass marble",
+        "Copper bell",
+        "Silver spoon"
+      ],
+      "hint": "It has a mysterious letter.",
+      "answer": 0
+    },
+    {
+      "q": "What letter is on the medallion?",
+      "options": [
+        "M",
+        "T",
+        "S",
+        "B"
+      ],
+      "hint": "It begins the name Morgan.",
+      "answer": 0
+    },
+    {
+      "q": "How do the children choose a place to visit?",
+      "options": [
+        "Wish to go to a picture in a book",
+        "Dig a tunnel",
+        "Call a taxi",
+        "Turn a steering wheel"
+      ],
+      "hint": "The books are magical.",
+      "answer": 0
+    },
+    {
+      "q": "What is Jack's usual way of exploring?",
+      "options": [
+        "Singing loudly",
+        "Running without looking",
+        "Carefully observing",
+        "Sleeping"
+      ],
+      "hint": "He likes to gather facts.",
+      "answer": 2
+    },
+    {
+      "q": "What is Annie's usual way of exploring?",
+      "options": [
+        "Hiding all day",
+        "Reading every page first",
+        "Trying things bravely",
+        "Refusing to move"
+      ],
+      "hint": "She often acts before Jack.",
+      "answer": 2
+    },
+    {
+      "q": "Where do the children live?",
+      "options": [
+        "Cairo",
+        "Frog Creek, Pennsylvania",
+        "London",
+        "Paris"
+      ],
+      "hint": "Their hometown has an animal in its name.",
+      "answer": 1
+    },
+    {
+      "q": "What helps Jack learn about the prehistoric animals?",
+      "options": [
+        "A television",
+        "A phone",
+        "A dinosaur book",
+        "A newspaper"
+      ],
+      "hint": "It came from the tree house.",
+      "answer": 2
+    },
+    {
+      "q": "Why is the T. rex frightening?",
+      "options": [
+        "It cannot move",
+        "It is very tiny",
+        "It is a large predator",
+        "It sings loudly"
+      ],
+      "hint": "It hunts other animals.",
+      "answer": 2
+    },
+    {
+      "q": "What do the children use to return home?",
+      "options": [
+        "A bicycle",
+        "A dinosaur egg",
+        "A book showing home",
+        "A rope bridge"
+      ],
+      "hint": "They make another wish.",
+      "answer": 2
+    },
+    {
+      "q": "What mystery remains after the adventure?",
+      "options": [
+        "Where their school is",
+        "How to swim",
+        "Who owns the tree house",
+        "What Jack's name is"
+      ],
+      "hint": "Someone left the magical books.",
+      "answer": 2
+    }
+  ]
+}

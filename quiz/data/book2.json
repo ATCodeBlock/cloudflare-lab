@@ -1,0 +1,227 @@
+{
+  "book": 2,
+  "title": "The Knight at Dawn",
+  "emoji": "⚔️",
+  "questions": [
+    {
+      "q": "Where do Jack and Annie travel?",
+      "options": [
+        "A space station",
+        "A medieval castle",
+        "A desert island",
+        "A modern school"
+      ],
+      "hint": "Knights live in this time.",
+      "answer": 1
+    },
+    {
+      "q": "What time of day is named in the title?",
+      "options": [
+        "Dawn",
+        "Sunset",
+        "Noon",
+        "Midnight"
+      ],
+      "hint": "The sun is beginning to rise.",
+      "answer": 0
+    },
+    {
+      "q": "What surrounds the castle?",
+      "options": [
+        "A railroad",
+        "A parking lot",
+        "A moat",
+        "A garden fence"
+      ],
+      "hint": "It is a protective ditch.",
+      "answer": 2
+    },
+    {
+      "q": "What crosses the moat?",
+      "options": [
+        "A drawbridge",
+        "A subway",
+        "A canoe",
+        "An elevator"
+      ],
+      "hint": "It can be raised or lowered.",
+      "answer": 0
+    },
+    {
+      "q": "What are the people in armor called?",
+      "options": [
+        "Pilots",
+        "Sailors",
+        "Knights",
+        "Doctors"
+      ],
+      "hint": "They serve in medieval times.",
+      "answer": 2
+    },
+    {
+      "q": "What does a knight wear for protection?",
+      "options": [
+        "Pajamas",
+        "A paper hat",
+        "Armor",
+        "A swimsuit"
+      ],
+      "hint": "It is made to protect the body.",
+      "answer": 2
+    },
+    {
+      "q": "What event do the children see in the castle?",
+      "options": [
+        "A baseball game",
+        "A feast",
+        "A science fair",
+        "A movie"
+      ],
+      "hint": "People gather to eat.",
+      "answer": 1
+    },
+    {
+      "q": "What does Annie bring that surprises the guards?",
+      "options": [
+        "A bicycle",
+        "A television",
+        "A laptop",
+        "A flashlight"
+      ],
+      "hint": "It makes a bright beam.",
+      "answer": 3
+    },
+    {
+      "q": "Why are the guards surprised by the flashlight?",
+      "options": [
+        "It is a pet",
+        "They have never seen such a light",
+        "It plays music",
+        "It is made of gold"
+      ],
+      "hint": "It comes from a different time.",
+      "answer": 1
+    },
+    {
+      "q": "What happens when the children are caught?",
+      "options": [
+        "They become kings",
+        "They receive medals",
+        "They are taken to a dungeon",
+        "They go to school"
+      ],
+      "hint": "It is a prison inside a castle.",
+      "answer": 2
+    },
+    {
+      "q": "What helps Annie frighten the guards?",
+      "options": [
+        "A dinosaur",
+        "A cannon",
+        "A dragon",
+        "Her flashlight"
+      ],
+      "hint": "Think of the modern object.",
+      "answer": 3
+    },
+    {
+      "q": "What do the children use to learn about castles?",
+      "options": [
+        "A phone",
+        "A book",
+        "A television",
+        "A radio"
+      ],
+      "hint": "Jack reads it.",
+      "answer": 1
+    },
+    {
+      "q": "Who helps the children after their escape?",
+      "options": [
+        "A ninja",
+        "A mummy",
+        "A pirate",
+        "A knight"
+      ],
+      "hint": "He wears armor.",
+      "answer": 3
+    },
+    {
+      "q": "What animal does the knight ride?",
+      "options": [
+        "Elephant",
+        "Horse",
+        "Donkey",
+        "Camel"
+      ],
+      "hint": "It is a common mount for knights.",
+      "answer": 1
+    },
+    {
+      "q": "What is a dungeon?",
+      "options": [
+        "A prison",
+        "A kitchen",
+        "A garden",
+        "A bedroom"
+      ],
+      "hint": "People may be locked inside.",
+      "answer": 0
+    },
+    {
+      "q": "What object does Jack find that has a letter M?",
+      "options": [
+        "A crown",
+        "A leather bookmark",
+        "A sword",
+        "A coin"
+      ],
+      "hint": "It can mark a page.",
+      "answer": 1
+    },
+    {
+      "q": "What does the letter M remind Jack of?",
+      "options": [
+        "A dinosaur egg",
+        "His lunch",
+        "The earlier medallion",
+        "His school bus"
+      ],
+      "hint": "He found it on another adventure.",
+      "answer": 2
+    },
+    {
+      "q": "Why must the children escape the castle?",
+      "options": [
+        "They are in danger",
+        "They lost a game",
+        "They want to join the feast",
+        "They dislike books"
+      ],
+      "hint": "The guards have caught them.",
+      "answer": 0
+    },
+    {
+      "q": "What is different about the castle world?",
+      "options": [
+        "Everyone has computers",
+        "It belongs to the past",
+        "Cars fill the roads",
+        "People travel by airplane"
+      ],
+      "hint": "It is from medieval times.",
+      "answer": 1
+    },
+    {
+      "q": "What helps the siblings get through danger?",
+      "options": [
+        "Ignoring each other",
+        "Going to sleep",
+        "Working together",
+        "Giving up"
+      ],
+      "hint": "They use both courage and thinking.",
+      "answer": 2
+    }
+  ]
+}

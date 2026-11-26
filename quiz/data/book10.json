@@ -1,0 +1,227 @@
+{
+  "book": 10,
+  "title": "Ghost Town at Sundown",
+  "emoji": "👻",
+  "questions": [
+    {
+      "q": "Where do the children travel?",
+      "options": [
+        "Ancient Egypt",
+        "The Moon",
+        "The American Old West",
+        "Ancient Japan"
+      ],
+      "hint": "Cowboys lived there.",
+      "answer": 2
+    },
+    {
+      "q": "What is the town called?",
+      "options": [
+        "Dolphin Bay",
+        "Rattlesnake Flats",
+        "Camel City",
+        "Frog Creek"
+      ],
+      "hint": "Its name includes a snake.",
+      "answer": 1
+    },
+    {
+      "q": "What is a ghost town?",
+      "options": [
+        "A mostly abandoned town",
+        "A town full of schools",
+        "An underwater city",
+        "A busy airport"
+      ],
+      "hint": "Most people have left it.",
+      "answer": 0
+    },
+    {
+      "q": "Who is Slim Cooley?",
+      "options": [
+        "A ninja",
+        "A cowboy",
+        "A pirate",
+        "An astronaut"
+      ],
+      "hint": "He works with horses.",
+      "answer": 1
+    },
+    {
+      "q": "What animal is Sunset?",
+      "options": [
+        "A horse",
+        "A dog",
+        "A mouse",
+        "A cat"
+      ],
+      "hint": "Slim is trying to help this animal.",
+      "answer": 0
+    },
+    {
+      "q": "What kind of criminals threaten the horses?",
+      "options": [
+        "Horse thieves",
+        "Book sellers",
+        "Doctors",
+        "Teachers"
+      ],
+      "hint": "They steal animals.",
+      "answer": 0
+    },
+    {
+      "q": "What is another word for stealing horses or cattle?",
+      "options": [
+        "Reading",
+        "Painting",
+        "Swimming",
+        "Rustling"
+      ],
+      "hint": "It is an Old West crime.",
+      "answer": 3
+    },
+    {
+      "q": "What animal do the children ride?",
+      "options": [
+        "A camel",
+        "A dinosaur",
+        "A horse",
+        "A dolphin"
+      ],
+      "hint": "Cowboys use this animal for travel.",
+      "answer": 2
+    },
+    {
+      "q": "What sound is mysterious in the ghost town?",
+      "options": [
+        "A car horn",
+        "Piano music",
+        "A telephone",
+        "A school bell"
+      ],
+      "hint": "It comes from an instrument with keys.",
+      "answer": 1
+    },
+    {
+      "q": "Where might people in an Old West town hear piano music?",
+      "options": [
+        "An airport",
+        "A saloon",
+        "A submarine",
+        "A space station"
+      ],
+      "hint": "It was a gathering place.",
+      "answer": 1
+    },
+    {
+      "q": "What is the answer to the riddle?",
+      "options": [
+        "An echo",
+        "A moonstone",
+        "A mango",
+        "A pearl"
+      ],
+      "hint": "It repeats a sound.",
+      "answer": 0
+    },
+    {
+      "q": "What causes an echo?",
+      "options": [
+        "A horse running",
+        "Sound bouncing back",
+        "Rain freezing",
+        "Light turning green"
+      ],
+      "hint": "You may hear your voice again.",
+      "answer": 1
+    },
+    {
+      "q": "What is the children's larger goal?",
+      "options": [
+        "Become astronauts",
+        "Become Master Librarians",
+        "Become horse thieves",
+        "Become kings"
+      ],
+      "hint": "Morgan gave them riddles.",
+      "answer": 1
+    },
+    {
+      "q": "What does sundown mean?",
+      "options": [
+        "Midnight",
+        "Sunset",
+        "Sunrise",
+        "Noon"
+      ],
+      "hint": "Daylight is ending.",
+      "answer": 1
+    },
+    {
+      "q": "Why do the children help Slim?",
+      "options": [
+        "He needs help with the horses",
+        "He wants a pyramid",
+        "He needs a computer",
+        "He wants a spaceship"
+      ],
+      "hint": "They care about his problem.",
+      "answer": 0
+    },
+    {
+      "q": "What kind of landscape fits this adventure?",
+      "options": [
+        "Dry Western land",
+        "An icy Moon base",
+        "A tropical reef",
+        "A rainforest canopy"
+      ],
+      "hint": "Think of the Old West.",
+      "answer": 0
+    },
+    {
+      "q": "What does Jack use to learn about the Old West?",
+      "options": [
+        "A radio",
+        "A smartphone",
+        "A book",
+        "A television"
+      ],
+      "hint": "He reads historical facts.",
+      "answer": 2
+    },
+    {
+      "q": "What quality does Slim show toward horses?",
+      "options": [
+        "Cruelty",
+        "Care",
+        "Fear of all animals",
+        "Indifference"
+      ],
+      "hint": "He wants to protect them.",
+      "answer": 1
+    },
+    {
+      "q": "Why is the town's music surprising?",
+      "options": [
+        "The town seems deserted",
+        "The children brought a piano",
+        "It is a modern city",
+        "Everyone is at a concert"
+      ],
+      "hint": "There seem to be few people around.",
+      "answer": 0
+    },
+    {
+      "q": "What helps the children finish their challenge?",
+      "options": [
+        "Solving the riddle and helping others",
+        "Ignoring Slim",
+        "Throwing away their book",
+        "Stealing horses"
+      ],
+      "hint": "They use kindness and thinking.",
+      "answer": 0
+    }
+  ]
+}

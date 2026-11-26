@@ -1,0 +1,227 @@
+{
+  "book": 9,
+  "title": "Dolphins at Daybreak",
+  "emoji": "🐬",
+  "questions": [
+    {
+      "q": "Where do the children travel?",
+      "options": [
+        "An ocean reef",
+        "A snowy forest",
+        "A medieval castle",
+        "A desert"
+      ],
+      "hint": "They explore underwater.",
+      "answer": 0
+    },
+    {
+      "q": "What new goal does Morgan give them?",
+      "options": [
+        "Become astronauts",
+        "Become knights",
+        "Become pirates",
+        "Become Master Librarians"
+      ],
+      "hint": "It involves solving riddles.",
+      "answer": 3
+    },
+    {
+      "q": "What must they solve?",
+      "options": [
+        "A crossword in school",
+        "A soccer match",
+        "A riddle",
+        "A spelling test"
+      ],
+      "hint": "It is a puzzle made of words.",
+      "answer": 2
+    },
+    {
+      "q": "What vehicle do they find?",
+      "options": [
+        "A helicopter",
+        "A mini-submarine",
+        "A bicycle",
+        "A train"
+      ],
+      "hint": "It travels underwater.",
+      "answer": 1
+    },
+    {
+      "q": "What is a coral reef?",
+      "options": [
+        "A desert road",
+        "A mountain of snow",
+        "An underwater habitat",
+        "A castle wall"
+      ],
+      "hint": "Many sea animals live there.",
+      "answer": 2
+    },
+    {
+      "q": "What large animal threatens their submarine?",
+      "options": [
+        "A camel",
+        "A tiger",
+        "An octopus",
+        "A horse"
+      ],
+      "hint": "It has eight arms.",
+      "answer": 2
+    },
+    {
+      "q": "What happens to the submarine?",
+      "options": [
+        "It becomes a castle",
+        "It grows legs",
+        "It develops a leak",
+        "It turns into a plane"
+      ],
+      "hint": "Water starts getting inside.",
+      "answer": 2
+    },
+    {
+      "q": "What dangerous fish do they encounter?",
+      "options": [
+        "A shark",
+        "A guppy",
+        "A clownfish",
+        "A goldfish"
+      ],
+      "hint": "It is a large ocean predator.",
+      "answer": 0
+    },
+    {
+      "q": "Which animals help the children?",
+      "options": [
+        "Elephants",
+        "Dolphins",
+        "Crocodiles",
+        "Penguins"
+      ],
+      "hint": "They are intelligent marine mammals.",
+      "answer": 1
+    },
+    {
+      "q": "How do dolphins breathe?",
+      "options": [
+        "Water through gills",
+        "Through their fins",
+        "Air through a blowhole",
+        "Through their tails"
+      ],
+      "hint": "They must come to the surface.",
+      "answer": 2
+    },
+    {
+      "q": "What is the answer to their riddle?",
+      "options": [
+        "A dolphin",
+        "An oyster",
+        "A whale",
+        "A shark"
+      ],
+      "hint": "It has a shell and may contain a pearl.",
+      "answer": 1
+    },
+    {
+      "q": "What treasure can an oyster contain?",
+      "options": [
+        "A pearl",
+        "A gold coin",
+        "A diamond ring",
+        "A key"
+      ],
+      "hint": "It can form inside the shell.",
+      "answer": 0
+    },
+    {
+      "q": "What does daybreak mean?",
+      "options": [
+        "The middle of the night",
+        "Late afternoon",
+        "Dinner time",
+        "The beginning of daylight"
+      ],
+      "hint": "The sun begins to rise.",
+      "answer": 3
+    },
+    {
+      "q": "Why is the ocean adventure dangerous?",
+      "options": [
+        "They lose a board game",
+        "They miss a bus",
+        "They forget lunch",
+        "They face predators and a leaking submarine"
+      ],
+      "hint": "Think about being underwater.",
+      "answer": 3
+    },
+    {
+      "q": "What does Jack use to learn about ocean animals?",
+      "options": [
+        "A book",
+        "A phone",
+        "A radio",
+        "A television"
+      ],
+      "hint": "He looks up facts.",
+      "answer": 0
+    },
+    {
+      "q": "How does Annie react to dolphins?",
+      "options": [
+        "She ignores them",
+        "She trusts and likes them",
+        "She thinks they are birds",
+        "She tries to frighten them"
+      ],
+      "hint": "She often connects with animals.",
+      "answer": 1
+    },
+    {
+      "q": "What is a submarine designed to do?",
+      "options": [
+        "Climb trees",
+        "Travel underwater",
+        "Fly through clouds",
+        "Drive on highways"
+      ],
+      "hint": "Its name begins with sub.",
+      "answer": 1
+    },
+    {
+      "q": "Why must the children solve riddles?",
+      "options": [
+        "To earn Master Librarian status",
+        "To finish a soccer game",
+        "To buy a boat",
+        "To become famous singers"
+      ],
+      "hint": "Morgan has given them a challenge.",
+      "answer": 0
+    },
+    {
+      "q": "What does the reef teach them about?",
+      "options": [
+        "Desert plants",
+        "Ocean life",
+        "Space travel",
+        "Ancient castles"
+      ],
+      "hint": "It contains many sea creatures.",
+      "answer": 1
+    },
+    {
+      "q": "What helps them return safely?",
+      "options": [
+        "Help from dolphins and teamwork",
+        "A snowmobile",
+        "A dinosaur",
+        "A pirate ship"
+      ],
+      "hint": "Their marine friends are important.",
+      "answer": 0
+    }
+  ]
+}

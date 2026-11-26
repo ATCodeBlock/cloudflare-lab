@@ -1,5 +1,6 @@
 'use strict';
 
+// ── Toast notification ──
 function showComingSoon(name) {
   const toast = document.getElementById('toast');
   toast.textContent = `🚧 ${name} is coming soon. Stay tuned!`;
@@ -7,6 +8,7 @@ function showComingSoon(name) {
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
+// ── Scroll-activated nav highlight ──
 (function () {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('nav a[href^="#"]');

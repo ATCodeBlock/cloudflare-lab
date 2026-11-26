@@ -1,0 +1,227 @@
+{
+  "book": 6,
+  "title": "Afternoon on the Amazon",
+  "emoji": "🌿",
+  "questions": [
+    {
+      "q": "Where do Jack and Annie travel?",
+      "options": [
+        "Ancient Rome",
+        "Sahara Desert",
+        "Amazon rainforest",
+        "North Pole"
+      ],
+      "hint": "It is a huge tropical forest.",
+      "answer": 2
+    },
+    {
+      "q": "On which continent is the Amazon rainforest?",
+      "options": [
+        "Antarctica",
+        "South America",
+        "Australia",
+        "Europe"
+      ],
+      "hint": "Brazil contains much of it.",
+      "answer": 1
+    },
+    {
+      "q": "What small companion travels with them?",
+      "options": [
+        "A horse",
+        "Peanut the mouse",
+        "A penguin",
+        "A dog"
+      ],
+      "hint": "They met this animal earlier.",
+      "answer": 1
+    },
+    {
+      "q": "What is the upper leafy layer of the rainforest called?",
+      "options": [
+        "Canopy",
+        "Basement",
+        "Attic",
+        "Sidewalk"
+      ],
+      "hint": "Tree branches form a roof.",
+      "answer": 0
+    },
+    {
+      "q": "What insects threaten the children?",
+      "options": [
+        "Butterflies",
+        "Ladybugs",
+        "Army ants",
+        "Fireflies"
+      ],
+      "hint": "They travel in large groups.",
+      "answer": 2
+    },
+    {
+      "q": "What do the children use to travel on the river?",
+      "options": [
+        "A train",
+        "A bicycle",
+        "A canoe",
+        "A car"
+      ],
+      "hint": "It floats on water.",
+      "answer": 2
+    },
+    {
+      "q": "What fish can be dangerous in the river?",
+      "options": [
+        "Piranhas",
+        "Clownfish",
+        "Goldfish",
+        "Seahorses"
+      ],
+      "hint": "They have sharp teeth.",
+      "answer": 0
+    },
+    {
+      "q": "What large snake is associated with their river adventure?",
+      "options": [
+        "Garden snake",
+        "Rattlesnake",
+        "Anaconda",
+        "Cobra"
+      ],
+      "hint": "It is a huge South American snake.",
+      "answer": 2
+    },
+    {
+      "q": "What big cat lives in the rainforest?",
+      "options": [
+        "House cat",
+        "Tiger",
+        "Jaguar",
+        "Lion"
+      ],
+      "hint": "It has spotted fur.",
+      "answer": 2
+    },
+    {
+      "q": "What animal helps guide the children?",
+      "options": [
+        "A camel",
+        "A polar bear",
+        "A sheep",
+        "A monkey"
+      ],
+      "hint": "It climbs trees easily.",
+      "answer": 3
+    },
+    {
+      "q": "What special object do they receive?",
+      "options": [
+        "A mango",
+        "A shell",
+        "A diamond",
+        "A sword"
+      ],
+      "hint": "It is a tropical fruit.",
+      "answer": 0
+    },
+    {
+      "q": "Why do they need the special object?",
+      "options": [
+        "To pay pirates",
+        "To help Morgan",
+        "To make a school poster",
+        "To feed a dinosaur"
+      ],
+      "hint": "They are continuing their mission.",
+      "answer": 1
+    },
+    {
+      "q": "What is the rainforest like?",
+      "options": [
+        "Dry and sandy",
+        "Warm and full of plants",
+        "Covered in buildings",
+        "Frozen and empty"
+      ],
+      "hint": "Rain helps plants grow.",
+      "answer": 1
+    },
+    {
+      "q": "What does Jack read to learn about the forest?",
+      "options": [
+        "A newspaper",
+        "A comic about robots",
+        "A menu",
+        "A rainforest book"
+      ],
+      "hint": "It contains facts about the habitat.",
+      "answer": 3
+    },
+    {
+      "q": "Why can the river be dangerous?",
+      "options": [
+        "It is made of glass",
+        "Animals live in it",
+        "It is always frozen",
+        "It has traffic lights"
+      ],
+      "hint": "Think of the fish and snake.",
+      "answer": 1
+    },
+    {
+      "q": "Why is the canopy useful to animals?",
+      "options": [
+        "It provides shelter and food",
+        "It is a parking lot",
+        "It contains elevators",
+        "It makes snow"
+      ],
+      "hint": "Leaves and branches support life.",
+      "answer": 0
+    },
+    {
+      "q": "How does Annie respond to the monkey?",
+      "options": [
+        "She puts it in a cage",
+        "She tries to sell it",
+        "She ignores it completely",
+        "She pays attention to it"
+      ],
+      "hint": "It helps the adventure move forward.",
+      "answer": 3
+    },
+    {
+      "q": "What is a rainforest habitat?",
+      "options": [
+        "A place where rainforest life lives",
+        "A type of book",
+        "A school subject only",
+        "A kind of airplane"
+      ],
+      "hint": "A habitat is a living thing's home.",
+      "answer": 0
+    },
+    {
+      "q": "What helps the children survive?",
+      "options": [
+        "Knowledge and teamwork",
+        "Ignoring danger",
+        "Throwing away clues",
+        "Sleeping all afternoon"
+      ],
+      "hint": "They help one another.",
+      "answer": 0
+    },
+    {
+      "q": "What mission continues after this adventure?",
+      "options": [
+        "Becoming pirates",
+        "Building a canoe factory",
+        "Finding objects to free Morgan",
+        "Moving to Brazil"
+      ],
+      "hint": "They have not collected everything yet.",
+      "answer": 2
+    }
+  ]
+}

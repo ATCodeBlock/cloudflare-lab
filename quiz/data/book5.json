@@ -1,0 +1,227 @@
+{
+  "book": 5,
+  "title": "Night of the Ninjas",
+  "emoji": "🥷",
+  "questions": [
+    {
+      "q": "Where do the children travel?",
+      "options": [
+        "Old Japan",
+        "Ancient Egypt",
+        "Modern New York",
+        "The Moon"
+      ],
+      "hint": "Ninjas are associated with this country.",
+      "answer": 0
+    },
+    {
+      "q": "Who is missing when they return to the tree house?",
+      "options": [
+        "Jack",
+        "Their teacher",
+        "Annie",
+        "Morgan le Fay"
+      ],
+      "hint": "The magical librarian needs help.",
+      "answer": 3
+    },
+    {
+      "q": "What small animal joins them?",
+      "options": [
+        "Mouse",
+        "Horse",
+        "Dog",
+        "Elephant"
+      ],
+      "hint": "It is tiny enough to carry.",
+      "answer": 0
+    },
+    {
+      "q": "What do they call the mouse?",
+      "options": [
+        "Pumpkin",
+        "Apple",
+        "Peanut",
+        "Cookie"
+      ],
+      "hint": "Its name is a small snack.",
+      "answer": 2
+    },
+    {
+      "q": "Who do they meet in Japan?",
+      "options": [
+        "Astronauts",
+        "Cowboys",
+        "Ninjas",
+        "Pirates"
+      ],
+      "hint": "They are skilled at moving quietly.",
+      "answer": 2
+    },
+    {
+      "q": "What kind of clothing helps ninjas hide at night?",
+      "options": [
+        "Bright yellow clothing",
+        "Dark clothing",
+        "Shiny armor",
+        "Swimsuits"
+      ],
+      "hint": "It blends into shadows.",
+      "answer": 1
+    },
+    {
+      "q": "Who teaches the children ninja wisdom?",
+      "options": [
+        "A pirate captain",
+        "A doctor",
+        "A queen",
+        "A ninja master"
+      ],
+      "hint": "He is an experienced teacher.",
+      "answer": 3
+    },
+    {
+      "q": "What does the ninja master tell them to use?",
+      "options": [
+        "Cars",
+        "Television",
+        "Computers",
+        "Nature"
+      ],
+      "hint": "Look at the world around them.",
+      "answer": 3
+    },
+    {
+      "q": "What should they do with their minds?",
+      "options": [
+        "Use them",
+        "Stop thinking",
+        "Ignore them",
+        "Forget everything"
+      ],
+      "hint": "Thinking helps solve problems.",
+      "answer": 0
+    },
+    {
+      "q": "What should they follow?",
+      "options": [
+        "Their hearts",
+        "A school bell",
+        "A shopping list",
+        "A television show"
+      ],
+      "hint": "It means trusting their feelings.",
+      "answer": 0
+    },
+    {
+      "q": "What dangerous warriors are in the area?",
+      "options": [
+        "Firefighters",
+        "Astronauts",
+        "Pirates",
+        "Samurai"
+      ],
+      "hint": "They are Japanese warriors.",
+      "answer": 3
+    },
+    {
+      "q": "Why must the children move quietly?",
+      "options": [
+        "To avoid being discovered",
+        "To win a singing contest",
+        "To scare Peanut",
+        "To wake everyone"
+      ],
+      "hint": "Stealth helps them stay safe.",
+      "answer": 0
+    },
+    {
+      "q": "What does stealth mean?",
+      "options": [
+        "Running loudly",
+        "Sleeping late",
+        "Playing music",
+        "Moving without being noticed"
+      ],
+      "hint": "Ninjas practice it.",
+      "answer": 3
+    },
+    {
+      "q": "What object do they collect for Morgan?",
+      "options": [
+        "A moonstone",
+        "A dinosaur egg",
+        "A pirate flag",
+        "A gold crown"
+      ],
+      "hint": "Its name includes the night sky.",
+      "answer": 0
+    },
+    {
+      "q": "Why are they collecting special objects?",
+      "options": [
+        "To help free Morgan",
+        "To decorate school",
+        "To buy candy",
+        "To sell at a store"
+      ],
+      "hint": "Their friend is under a spell.",
+      "answer": 0
+    },
+    {
+      "q": "What time of day is important in this adventure?",
+      "options": [
+        "Noon",
+        "Night",
+        "Breakfast time",
+        "Lunch time"
+      ],
+      "hint": "The title tells you.",
+      "answer": 1
+    },
+    {
+      "q": "What does the forest provide?",
+      "options": [
+        "A highway",
+        "A shopping mall",
+        "A classroom",
+        "Places to hide"
+      ],
+      "hint": "Trees and shadows can protect them.",
+      "answer": 3
+    },
+    {
+      "q": "What helps them understand the unfamiliar place?",
+      "options": [
+        "Ignoring clues",
+        "Calling a taxi",
+        "Reading and observing",
+        "Watching television"
+      ],
+      "hint": "Jack uses facts and his senses.",
+      "answer": 2
+    },
+    {
+      "q": "Which lesson encourages kindness and courage?",
+      "options": [
+        "Never help anyone",
+        "Give up quickly",
+        "Follow your heart",
+        "Always shout"
+      ],
+      "hint": "It is one of the master's lessons.",
+      "answer": 2
+    },
+    {
+      "q": "Is the mission to rescue Morgan finished after this book?",
+      "options": [
+        "Yes, immediately",
+        "No, more objects are needed",
+        "They destroy the tree house",
+        "They forget Morgan"
+      ],
+      "hint": "This is the first part of a longer mission.",
+      "answer": 1
+    }
+  ]
+}

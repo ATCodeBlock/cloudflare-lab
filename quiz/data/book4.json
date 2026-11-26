@@ -1,0 +1,227 @@
+{
+  "book": 4,
+  "title": "Pirates Past Noon",
+  "emoji": "🏴‍☠️",
+  "questions": [
+    {
+      "q": "Where do the children arrive?",
+      "options": [
+        "A space station",
+        "A tropical island",
+        "A castle",
+        "A snowy mountain"
+      ],
+      "hint": "There is sand and ocean.",
+      "answer": 1
+    },
+    {
+      "q": "Who captures Jack and Annie?",
+      "options": [
+        "Knights",
+        "Teachers",
+        "Pirates",
+        "Astronauts"
+      ],
+      "hint": "They sail and search for treasure.",
+      "answer": 2
+    },
+    {
+      "q": "What is the pirate captain's name?",
+      "options": [
+        "Cap'n Bones",
+        "Black Panther",
+        "Captain Hook",
+        "King Arthur"
+      ],
+      "hint": "His name reminds you of a skeleton.",
+      "answer": 0
+    },
+    {
+      "q": "What do the pirates want to find?",
+      "options": [
+        "A magic carpet",
+        "A dinosaur",
+        "Buried treasure",
+        "A school"
+      ],
+      "hint": "They hope to become rich.",
+      "answer": 2
+    },
+    {
+      "q": "What does Jack use to learn about pirates?",
+      "options": [
+        "A computer",
+        "A book",
+        "A radio",
+        "A television"
+      ],
+      "hint": "It comes from the tree house.",
+      "answer": 1
+    },
+    {
+      "q": "What does the captain think the children can help him do?",
+      "options": [
+        "Fly to the Moon",
+        "Cook dinner",
+        "Build a castle",
+        "Find treasure"
+      ],
+      "hint": "He wants their knowledge.",
+      "answer": 3
+    },
+    {
+      "q": "What kind of bird appears in the adventure?",
+      "options": [
+        "Parrot",
+        "Ostrich",
+        "Swan",
+        "Penguin"
+      ],
+      "hint": "This colorful bird is often linked to pirates.",
+      "answer": 0
+    },
+    {
+      "q": "What is a treasure chest used for?",
+      "options": [
+        "Washing clothes",
+        "Holding valuables",
+        "Growing flowers",
+        "Cooking soup"
+      ],
+      "hint": "Gold might be stored inside.",
+      "answer": 1
+    },
+    {
+      "q": "What does a pirate ship travel on?",
+      "options": [
+        "Railroad tracks",
+        "Water",
+        "Roads",
+        "Sand dunes"
+      ],
+      "hint": "It sails across the sea.",
+      "answer": 1
+    },
+    {
+      "q": "What weather threatens the island adventure?",
+      "options": [
+        "A dust storm",
+        "A heat wave only",
+        "A snowstorm",
+        "A storm"
+      ],
+      "hint": "The sea becomes dangerous.",
+      "answer": 3
+    },
+    {
+      "q": "What does the word buried mean?",
+      "options": [
+        "Hidden under the ground",
+        "Sitting on a shelf",
+        "Floating in the sky",
+        "Hanging on a wall"
+      ],
+      "hint": "Think of digging.",
+      "answer": 0
+    },
+    {
+      "q": "Who is revealed as the owner of the magic tree house?",
+      "options": [
+        "Hutepi",
+        "Cap'n Bones",
+        "Jack's teacher",
+        "Morgan le Fay"
+      ],
+      "hint": "Her name begins with M.",
+      "answer": 3
+    },
+    {
+      "q": "What is Morgan's connection to books?",
+      "options": [
+        "She is a magical librarian",
+        "She dislikes reading",
+        "She sells shoes",
+        "She builds ships"
+      ],
+      "hint": "She collects knowledge.",
+      "answer": 0
+    },
+    {
+      "q": "What bird is connected to Morgan in this adventure?",
+      "options": [
+        "Eagle",
+        "Robin",
+        "Parrot",
+        "Duck"
+      ],
+      "hint": "It appears on the island.",
+      "answer": 2
+    },
+    {
+      "q": "What letter connects the earlier clues to Morgan?",
+      "options": [
+        "J",
+        "P",
+        "M",
+        "A"
+      ],
+      "hint": "It is her first initial.",
+      "answer": 2
+    },
+    {
+      "q": "Why do the pirates keep the children with them?",
+      "options": [
+        "They want to play soccer",
+        "They want help finding treasure",
+        "They want to teach math",
+        "They need a doctor"
+      ],
+      "hint": "The captain is searching for riches.",
+      "answer": 1
+    },
+    {
+      "q": "How does Jack usually solve problems?",
+      "options": [
+        "By shouting only",
+        "By reading and thinking",
+        "By sleeping",
+        "By throwing away books"
+      ],
+      "hint": "He looks for useful facts.",
+      "answer": 1
+    },
+    {
+      "q": "How does Annie usually help?",
+      "options": [
+        "By hiding books",
+        "By being brave and caring",
+        "By refusing to help",
+        "By joining the pirates"
+      ],
+      "hint": "She acts when others need help.",
+      "answer": 1
+    },
+    {
+      "q": "What is the main danger in this adventure?",
+      "options": [
+        "Missing a school bus",
+        "Being held by pirates",
+        "Breaking a pencil",
+        "Losing a soccer game"
+      ],
+      "hint": "The captain will not let them go freely.",
+      "answer": 1
+    },
+    {
+      "q": "What major mystery is solved at the end?",
+      "options": [
+        "Where dinosaurs live",
+        "Who owns the tree house",
+        "How pyramids were built",
+        "Who invented ships"
+      ],
+      "hint": "The mysterious M finally makes sense.",
+      "answer": 1
+    }
+  ]
+}

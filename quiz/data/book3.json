@@ -1,0 +1,227 @@
+{
+  "book": 3,
+  "title": "Mummies in the Morning",
+  "emoji": "🏺",
+  "questions": [
+    {
+      "q": "Where do the children travel?",
+      "options": [
+        "Ancient Egypt",
+        "Modern Florida",
+        "Ancient Rome",
+        "The Arctic"
+      ],
+      "hint": "Pyramids are found there.",
+      "answer": 0
+    },
+    {
+      "q": "What huge stone structure do they explore?",
+      "options": [
+        "A skyscraper",
+        "A stadium",
+        "A lighthouse",
+        "A pyramid"
+      ],
+      "hint": "It has sloping sides.",
+      "answer": 3
+    },
+    {
+      "q": "What animal do they follow?",
+      "options": [
+        "A dog",
+        "A cat",
+        "A rabbit",
+        "A horse"
+      ],
+      "hint": "Ancient Egyptians valued this animal.",
+      "answer": 1
+    },
+    {
+      "q": "Who is Hutepi?",
+      "options": [
+        "A pirate",
+        "A queen's ghost",
+        "A dinosaur",
+        "A knight"
+      ],
+      "hint": "She needs help in the pyramid.",
+      "answer": 1
+    },
+    {
+      "q": "What does Hutepi need help finding?",
+      "options": [
+        "A schoolbook",
+        "A cookbook",
+        "The Book of the Dead",
+        "A treasure map"
+      ],
+      "hint": "It is connected to her journey after death.",
+      "answer": 2
+    },
+    {
+      "q": "Why does Hutepi need help reading?",
+      "options": [
+        "She lost her glasses at school",
+        "She speaks only Spanish",
+        "She has no book at home",
+        "She cannot read the signs herself"
+      ],
+      "hint": "The children must help with the symbols.",
+      "answer": 3
+    },
+    {
+      "q": "What are ancient Egyptian picture symbols called?",
+      "options": [
+        "Hieroglyphs",
+        "Decimals",
+        "Traffic signs",
+        "Musical notes"
+      ],
+      "hint": "Pictures can stand for words or sounds.",
+      "answer": 0
+    },
+    {
+      "q": "What is a mummy?",
+      "options": [
+        "A living dinosaur",
+        "A preserved dead body",
+        "A type of bird",
+        "A robot"
+      ],
+      "hint": "Ancient Egyptians wrapped bodies.",
+      "answer": 1
+    },
+    {
+      "q": "What is a sarcophagus?",
+      "options": [
+        "A cooking pot",
+        "A boat",
+        "A chair",
+        "A coffin"
+      ],
+      "hint": "It holds a body.",
+      "answer": 3
+    },
+    {
+      "q": "What does Jack use to understand Egypt?",
+      "options": [
+        "A telescope",
+        "A phone",
+        "A compass",
+        "A book"
+      ],
+      "hint": "He reads facts about the past.",
+      "answer": 3
+    },
+    {
+      "q": "What kind of passages are inside the pyramid?",
+      "options": [
+        "Busy highways",
+        "Open beaches",
+        "Dark passages",
+        "Snowy trails"
+      ],
+      "hint": "The rooms are inside stone walls.",
+      "answer": 2
+    },
+    {
+      "q": "What makes the pyramid difficult to explore?",
+      "options": [
+        "Its loud music",
+        "Its playground",
+        "Its confusing passages",
+        "Its traffic lights"
+      ],
+      "hint": "It is easy to lose your way.",
+      "answer": 2
+    },
+    {
+      "q": "How does Annie respond to the ghost?",
+      "options": [
+        "She refuses to listen",
+        "She falls asleep",
+        "She attacks her",
+        "She tries to help"
+      ],
+      "hint": "Annie is often kind to strangers.",
+      "answer": 3
+    },
+    {
+      "q": "What does the queen hope to reach?",
+      "options": [
+        "A soccer field",
+        "The afterlife",
+        "A pirate ship",
+        "A modern school"
+      ],
+      "hint": "It is a belief about life after death.",
+      "answer": 1
+    },
+    {
+      "q": "What helps guide the children in the pyramid?",
+      "options": [
+        "A dolphin",
+        "A penguin",
+        "The cat",
+        "A horse"
+      ],
+      "hint": "Remember the animal they followed.",
+      "answer": 2
+    },
+    {
+      "q": "What subject does this adventure teach about?",
+      "options": [
+        "Modern computers",
+        "Ancient Egyptian customs",
+        "Space travel",
+        "Ocean sports"
+      ],
+      "hint": "Think about mummies and pyramids.",
+      "answer": 1
+    },
+    {
+      "q": "Why are the picture symbols important?",
+      "options": [
+        "They contain clues",
+        "They tell the weather today",
+        "They make food",
+        "They are toys"
+      ],
+      "hint": "The children need to understand them.",
+      "answer": 0
+    },
+    {
+      "q": "What does Jack do when he needs information?",
+      "options": [
+        "Turns on a television",
+        "Asks a robot",
+        "Calls his teacher",
+        "Reads his book"
+      ],
+      "hint": "He carries reading material.",
+      "answer": 3
+    },
+    {
+      "q": "What quality helps the children solve the mystery?",
+      "options": [
+        "Curiosity",
+        "Laziness",
+        "Greed",
+        "Rudeness"
+      ],
+      "hint": "They want to understand the clues.",
+      "answer": 0
+    },
+    {
+      "q": "How do they travel back to Frog Creek?",
+      "options": [
+        "By using the magic tree house",
+        "By camel",
+        "By airplane",
+        "By train"
+      ],
+      "hint": "Their usual magical transport returns them.",
+      "answer": 0
+    }
+  ]
+}

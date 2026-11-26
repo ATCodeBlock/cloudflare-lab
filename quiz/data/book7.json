@@ -1,0 +1,227 @@
+{
+  "book": 7,
+  "title": "Sunset of the Sabertooth",
+  "emoji": "🦣",
+  "questions": [
+    {
+      "q": "What time period do the children visit?",
+      "options": [
+        "The future",
+        "Ancient Egypt",
+        "Medieval times",
+        "The Ice Age"
+      ],
+      "hint": "Much of Earth was colder.",
+      "answer": 3
+    },
+    {
+      "q": "What are they wearing when they arrive?",
+      "options": [
+        "Heavy winter coats",
+        "School uniforms",
+        "Knight armor",
+        "Swimsuits"
+      ],
+      "hint": "They had been swimming.",
+      "answer": 3
+    },
+    {
+      "q": "Why are their clothes a problem?",
+      "options": [
+        "The weather is very cold",
+        "They are too bright for school",
+        "They are made of metal",
+        "They are too heavy"
+      ],
+      "hint": "They need warmth.",
+      "answer": 0
+    },
+    {
+      "q": "Where do they seek shelter?",
+      "options": [
+        "A cave",
+        "A castle",
+        "A ship",
+        "A skyscraper"
+      ],
+      "hint": "It is a natural opening in rock.",
+      "answer": 0
+    },
+    {
+      "q": "What large animal has long curved tusks?",
+      "options": [
+        "Horse",
+        "Jaguar",
+        "Woolly mammoth",
+        "Wolf"
+      ],
+      "hint": "It resembles a hairy elephant.",
+      "answer": 2
+    },
+    {
+      "q": "What animal has very long sharp teeth?",
+      "options": [
+        "Mouse",
+        "Deer",
+        "Rabbit",
+        "Sabertooth cat"
+      ],
+      "hint": "Its name describes its teeth.",
+      "answer": 3
+    },
+    {
+      "q": "What animal's cave do they encounter?",
+      "options": [
+        "Cave bear",
+        "Dolphin",
+        "Parrot",
+        "Penguin"
+      ],
+      "hint": "It is a large furry animal.",
+      "answer": 0
+    },
+    {
+      "q": "What do they find on cave walls?",
+      "options": [
+        "Paintings",
+        "Clocks",
+        "Televisions",
+        "Windows"
+      ],
+      "hint": "Early humans made pictures.",
+      "answer": 0
+    },
+    {
+      "q": "What kind of people lived in this time?",
+      "options": [
+        "Modern police officers",
+        "Medieval knights",
+        "Early humans",
+        "Modern astronauts"
+      ],
+      "hint": "They lived long before cities today.",
+      "answer": 2
+    },
+    {
+      "q": "What helps keep the children warm?",
+      "options": [
+        "Animal skins",
+        "Wet towels",
+        "Ice cubes",
+        "Paper hats"
+      ],
+      "hint": "Fur can trap warmth.",
+      "answer": 0
+    },
+    {
+      "q": "Who helps them in the Ice Age?",
+      "options": [
+        "Cap'n Bones",
+        "A mysterious sorcerer",
+        "Hutepi",
+        "A robot"
+      ],
+      "hint": "He is connected with the cave people.",
+      "answer": 1
+    },
+    {
+      "q": "What special object do they receive?",
+      "options": [
+        "A mango",
+        "A mammoth bone flute",
+        "A gold ring",
+        "A flashlight"
+      ],
+      "hint": "It is a musical instrument.",
+      "answer": 1
+    },
+    {
+      "q": "What is a flute used for?",
+      "options": [
+        "Digging holes",
+        "Measuring time",
+        "Making music",
+        "Cooking food"
+      ],
+      "hint": "You can blow into it.",
+      "answer": 2
+    },
+    {
+      "q": "What animal carries the children during their adventure?",
+      "options": [
+        "A woolly mammoth",
+        "A horse",
+        "A dolphin",
+        "A camel"
+      ],
+      "hint": "It has long tusks.",
+      "answer": 0
+    },
+    {
+      "q": "What small companion is part of their mission?",
+      "options": [
+        "A dog named Spot",
+        "A cat named Tiger",
+        "Peanut",
+        "A parrot named Blue"
+      ],
+      "hint": "It is their mouse friend.",
+      "answer": 2
+    },
+    {
+      "q": "Why do they need another special object?",
+      "options": [
+        "To free Morgan",
+        "To buy a coat",
+        "To build a school",
+        "To win a race"
+      ],
+      "hint": "Their magical librarian needs help.",
+      "answer": 0
+    },
+    {
+      "q": "What does extinct mean?",
+      "options": [
+        "An animal is very small",
+        "No living members of a species remain",
+        "An animal is asleep",
+        "An animal is hiding"
+      ],
+      "hint": "Sabertooth cats no longer live today.",
+      "answer": 1
+    },
+    {
+      "q": "What does Jack use to learn about Ice Age animals?",
+      "options": [
+        "A book",
+        "A television",
+        "A phone",
+        "A radio"
+      ],
+      "hint": "He reads about them.",
+      "answer": 0
+    },
+    {
+      "q": "What is a major challenge in this book?",
+      "options": [
+        "Finding a parking space",
+        "Doing homework",
+        "Surviving the cold and dangerous animals",
+        "Buying lunch"
+      ],
+      "hint": "Think about their swimsuits and predators.",
+      "answer": 2
+    },
+    {
+      "q": "What quality helps the children keep going?",
+      "options": [
+        "Greed",
+        "Laziness",
+        "Courage",
+        "Dishonesty"
+      ],
+      "hint": "They face scary situations.",
+      "answer": 2
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "book": 8,
+  "title": "Midnight on the Moon",
+  "emoji": "🌙",
+  "questions": [
+    {
+      "q": "Where does the tree house take the children?",
+      "options": [
+        "The Sun",
+        "Jupiter",
+        "Mars",
+        "The Moon"
+      ],
+      "hint": "It orbits Earth.",
+      "answer": 3
+    },
+    {
+      "q": "What year do they visit?",
+      "options": [
+        "1900",
+        "2031",
+        "1492",
+        "1776"
+      ],
+      "hint": "It is in the future of the original story.",
+      "answer": 1
+    },
+    {
+      "q": "What building do they arrive in?",
+      "options": [
+        "A farmhouse",
+        "A pyramid",
+        "A castle",
+        "A moon base"
+      ],
+      "hint": "People can live there with special equipment.",
+      "answer": 3
+    },
+    {
+      "q": "What must they wear outside?",
+      "options": [
+        "Pajamas",
+        "Spacesuits",
+        "Swimsuits",
+        "Raincoats"
+      ],
+      "hint": "They need protection and air.",
+      "answer": 1
+    },
+    {
+      "q": "Why do they need air supplies?",
+      "options": [
+        "The Moon has no breathable air",
+        "The Moon is full of smoke",
+        "The Moon is made of fire",
+        "The Moon is underwater"
+      ],
+      "hint": "Humans need oxygen.",
+      "answer": 0
+    },
+    {
+      "q": "How do they move around on the Moon?",
+      "options": [
+        "In a canoe",
+        "In a train",
+        "On a horse",
+        "In a moon buggy"
+      ],
+      "hint": "It is a vehicle for the lunar surface.",
+      "answer": 3
+    },
+    {
+      "q": "Why can they jump higher on the Moon?",
+      "options": [
+        "Their shoes have wings",
+        "They are taller",
+        "The Moon is windy",
+        "Gravity is weaker"
+      ],
+      "hint": "Gravity pulls objects down.",
+      "answer": 3
+    },
+    {
+      "q": "Who appears in a spacesuit?",
+      "options": [
+        "A dinosaur",
+        "A knight",
+        "A mysterious moon man",
+        "A pirate"
+      ],
+      "hint": "They meet someone unexpected.",
+      "answer": 2
+    },
+    {
+      "q": "What does the mysterious figure give them?",
+      "options": [
+        "A sword",
+        "A gold coin",
+        "A mango",
+        "A drawing of stars"
+      ],
+      "hint": "It is a clue on paper.",
+      "answer": 3
+    },
+    {
+      "q": "What does the star drawing represent?",
+      "options": [
+        "A ship",
+        "A mouse",
+        "A castle",
+        "A horse"
+      ],
+      "hint": "Think of their small companion.",
+      "answer": 1
+    },
+    {
+      "q": "Who is Peanut really?",
+      "options": [
+        "Jack's teacher",
+        "A pirate captain",
+        "Morgan le Fay",
+        "A ninja master"
+      ],
+      "hint": "The mouse is under a spell.",
+      "answer": 2
+    },
+    {
+      "q": "What happens to Morgan at the end?",
+      "options": [
+        "She is freed from the spell",
+        "She loses her books forever",
+        "She moves to Mars",
+        "She becomes a dinosaur"
+      ],
+      "hint": "The mission is completed.",
+      "answer": 0
+    },
+    {
+      "q": "What is the surface of the Moon like?",
+      "options": [
+        "Covered in grass",
+        "Full of oceans",
+        "Covered in forests",
+        "Rocky and dusty"
+      ],
+      "hint": "There are many craters.",
+      "answer": 3
+    },
+    {
+      "q": "What is a crater?",
+      "options": [
+        "A tall tree",
+        "A bowl-shaped hollow",
+        "A spaceship",
+        "A kind of bird"
+      ],
+      "hint": "Impacts can make one.",
+      "answer": 1
+    },
+    {
+      "q": "What planet can they see from the Moon?",
+      "options": [
+        "Earth",
+        "Mercury only",
+        "Saturn only",
+        "Neptune only"
+      ],
+      "hint": "It is their home planet.",
+      "answer": 0
+    },
+    {
+      "q": "Why must they watch their air supply?",
+      "options": [
+        "It makes them invisible",
+        "It changes their names",
+        "It can run out",
+        "It turns into candy"
+      ],
+      "hint": "They cannot breathe outside without it.",
+      "answer": 2
+    },
+    {
+      "q": "What does Jack read to learn about space?",
+      "options": [
+        "A pirate book",
+        "A book about castles",
+        "A cookbook",
+        "A Moon book"
+      ],
+      "hint": "It matches their destination.",
+      "answer": 3
+    },
+    {
+      "q": "What does the word midnight mean?",
+      "options": [
+        "Twelve o'clock at noon",
+        "Breakfast time",
+        "Sunrise",
+        "Twelve o'clock at night"
+      ],
+      "hint": "It is the middle of the night.",
+      "answer": 3
+    },
+    {
+      "q": "What is the main goal of the adventure?",
+      "options": [
+        "Build a new planet",
+        "Collect soccer balls",
+        "Find a pirate ship",
+        "Complete the mission to help Morgan"
+      ],
+      "hint": "They need the final clue.",
+      "answer": 3
+    },
+    {
+      "q": "What helps them solve the final mystery?",
+      "options": [
+        "Understanding the star clue",
+        "Digging for gold",
+        "Buying a telescope",
+        "Ignoring Peanut"
+      ],
+      "hint": "The picture points to their friend.",
+      "answer": 0
+    }
+  ]
+}

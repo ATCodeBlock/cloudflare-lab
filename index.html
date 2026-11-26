@@ -11,11 +11,12 @@
   <!-- NAV -->
   <header class="navbar">
     <div class="nav-inner">
-      <a href="#" class="logo">&#9729; Avinash Cloud Lab</a>
+      <a href="#" class="logo">☁ Avinash Cloud Lab</a>
       <nav>
         <a href="#cloudflare">Cloudflare</a>
         <a href="#rest-api">REST APIs</a>
         <a href="#websockets">WebSockets</a>
+        <a href="quiz/index.html">Quizzes</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -37,20 +38,20 @@
       <p class="section-subtitle">Edge computing, Workers, Pages, and CDN fundamentals.</p>
       <div class="cards">
         <div class="card">
-          <div class="card-icon">&#127760;</div>
+          <div class="card-icon">🌐</div>
           <h3>Cloudflare Pages</h3>
           <p>Deploy static sites and JAMstack apps directly from Git with global edge delivery.</p>
           <span class="tag">Static Hosting</span>
         </div>
         <div class="card">
-          <div class="card-icon">&#9889;</div>
+          <div class="card-icon">⚡</div>
           <h3>Cloudflare Workers</h3>
           <p>Run serverless JavaScript at the edge, close to your users, with zero cold starts.</p>
           <span class="tag">Serverless</span>
         </div>
         <div class="card">
-          <div class="card-icon">&#128274;</div>
-          <h3>Security &amp; CDN</h3>
+          <div class="card-icon">🔒</div>
+          <h3>Security & CDN</h3>
           <p>DDoS protection, WAF, SSL/TLS and global content delivery built in.</p>
           <span class="tag">Security</span>
         </div>
@@ -65,20 +66,20 @@
       <p class="section-subtitle">Building and consuming RESTful services with Java and Spring Boot.</p>
       <div class="cards">
         <div class="card">
-          <div class="card-icon">&#9749;</div>
+          <div class="card-icon">☕</div>
           <h3>Spring Boot Basics</h3>
           <p>Stand up a REST API with Spring Boot, controllers, and JSON serialization in minutes.</p>
           <span class="tag">Spring Boot</span>
         </div>
         <div class="card demo-card">
-          <div class="card-icon">&#128640;</div>
+          <div class="card-icon">🚀</div>
           <h3>REST API Demo</h3>
           <p>Interactive demo showcasing CRUD endpoints, request/response flow, and HTTP methods.</p>
           <span class="tag tag-coming">Coming Soon</span>
           <button class="btn btn-outline" onclick="showComingSoon('REST API Demo')">Preview</button>
         </div>
         <div class="card">
-          <div class="card-icon">&#128203;</div>
+          <div class="card-icon">📋</div>
           <h3>API Best Practices</h3>
           <p>Versioning, error handling, pagination, and authentication patterns for production APIs.</p>
           <span class="tag">Best Practices</span>
@@ -94,23 +95,52 @@
       <p class="section-subtitle">Real-time, bidirectional communication for the modern web.</p>
       <div class="cards">
         <div class="card">
-          <div class="card-icon">&#128268;</div>
+          <div class="card-icon">🔌</div>
           <h3>WebSocket Protocol</h3>
           <p>Full-duplex communication over a single TCP connection — how it works under the hood.</p>
           <span class="tag">Protocol</span>
         </div>
         <div class="card demo-card">
-          <div class="card-icon">&#127918;</div>
+          <div class="card-icon">🎮</div>
           <h3>Multiplayer WebSocket Demo</h3>
           <p>Live multiplayer demo using WebSockets — see real-time state sync between clients.</p>
           <span class="tag tag-coming">Coming Soon</span>
           <button class="btn btn-outline" onclick="showComingSoon('Multiplayer WebSocket Demo')">Preview</button>
         </div>
         <div class="card">
-          <div class="card-icon">&#128736;</div>
+          <div class="card-icon">🛠</div>
           <h3>Cloudflare Durable Objects</h3>
           <p>Scale WebSocket connections at the edge using Cloudflare's stateful serverless primitives.</p>
           <span class="tag">Edge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAGIC TREE HOUSE QUIZ SECTION -->
+  <section id="quizzes" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Magic Tree House Quizzes</h2>
+      <p class="section-subtitle">Interactive reading comprehension quizzes for grades 2–3. Books 1–10 available now.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>10 Book Quizzes</h3>
+          <p>Covers books 1–10 of the Magic Tree House series with 20 questions each.</p>
+          <span class="tag">Reading</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏆</div>
+          <h3>Score &amp; Progress</h3>
+          <p>Instant feedback, hints, and a final pass/fail result at 80% threshold.</p>
+          <span class="tag">Interactive</span>
+        </div>
+        <div class="card demo-card">
+          <div class="card-icon">🦕</div>
+          <h3>Quiz Dashboard</h3>
+          <p>Pick a book and test your knowledge — no login required, works on any device.</p>
+          <span class="tag" style="background:rgba(246,130,31,0.15);color:#f6821f;">Live</span>
+          <a href="quiz/index.html" class="btn btn-outline" style="margin-top:0.75rem;">Open Quizzes</a>
         </div>
       </div>
     </div>
@@ -123,7 +153,9 @@
     </div>
   </footer>
 
+  <!-- TOAST -->
   <div id="toast" class="toast" aria-live="polite"></div>
+
   <script src="js/app.js"></script>
 </body>
 </html>
